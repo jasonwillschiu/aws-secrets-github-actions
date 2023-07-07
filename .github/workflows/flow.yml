@@ -23,7 +23,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Step name
+      - name: Get Secret from AWS Secret Manager
         uses: aws-actions/aws-secretsmanager-get-secrets@v1
         with:
           secret-ids: |

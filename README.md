@@ -11,3 +11,4 @@ How to use AWS Secrets Manager
    b. aws-secretsmanager-get-secret
 
 5. When we get our AWS secrets, assign them to a variable and use inside Github Actions
+6. Refer to flow.yml file in this repo for an example: .github/workflows/flow.yml
