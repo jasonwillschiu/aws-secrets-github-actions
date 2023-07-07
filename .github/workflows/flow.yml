@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  AWS_REGION: us-west-2
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -24,8 +27,8 @@ jobs:
         uses: aws-actions/aws-secretsmanager-get-secrets@v1
         with:
           secret-ids: |
-            ENV_VAR, secretId2
+            SECRET1, testSec1
           parse-json-secrets: false
 
       - name: Show secret
-        run: echo "your secret is ${{env.ENV_VAR}}"
+        run: echo "your secret is ${{env.SECRET1}}"
